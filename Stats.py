@@ -50,7 +50,6 @@ print('\nAMS')
 print(tab(df.head(10), headers='keys', tablefmt='psql', showindex=False))
 print(df.shape[0])
 
-
 # STATS SPECIALTY
 df_Specialties = pd.DataFrame(df.groupby(['speciality'], dropna=False).size(), columns=['Total'])\
     .sort_values(['Total'], ascending=False).reset_index()
